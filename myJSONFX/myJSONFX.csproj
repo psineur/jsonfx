@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3322B844-CB92-473C-8CEB-18A083CA217D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>myJSONFX</RootNamespace>
+    <AssemblyName>myJSONFX</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Json\" />
+    <Folder Include="Serialization\" />
+    <Folder Include="Model\" />
+    <Folder Include="IO\" />
+    <Folder Include="Utils\" />
+    <Folder Include="CodeGen\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\JsonFx\Json\JsonFormatter.cs">
+      <Link>Json\JsonFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonGrammar.cs">
+      <Link>Json\JsonGrammar.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonIgnoreAttribute.cs">
+      <Link>Json\JsonIgnoreAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonNameAttribute.cs">
+      <Link>Json\JsonNameAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonReader.cs">
+      <Link>Json\JsonReader.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonSpecifiedPropertyAttribute.cs">
+      <Link>Json\JsonSpecifiedPropertyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonTokenizer.cs">
+      <Link>Json\JsonTokenizer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\JsonWriter.cs">
+      <Link>Json\JsonWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Json\Resolvers\JsonResolverStrategy.cs">
+      <Link>Json\Resolvers\JsonResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\DataName.cs">
+      <Link>Serialization\DataName.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\DataReaderSettings.cs">
+      <Link>Serialization\DataReaderSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\DataReader`1.cs">
+      <Link>Serialization\DataReader`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\DataWriterSettings.cs">
+      <Link>Serialization\DataWriterSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\DataWriter`1.cs">
+      <Link>Serialization\DataWriter`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Exceptions.cs">
+      <Link>Serialization\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IBinaryFormattable`1.cs">
+      <Link>Serialization\IBinaryFormattable`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IBinaryFormatter`1.cs">
+      <Link>Serialization\IBinaryFormatter`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IBinaryTokenizer`1.cs">
+      <Link>Serialization\IBinaryTokenizer`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IDataReader.cs">
+      <Link>Serialization\IDataReader.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IDataTransformer`2.cs">
+      <Link>Serialization\IDataTransformer`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IDataWriter.cs">
+      <Link>Serialization\IDataWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\IObjectWalker`1.cs">
+      <Link>Serialization\IObjectWalker`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\ITextFormattable`1.cs">
+      <Link>Serialization\ITextFormattable`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\ITextFormatter`1.cs">
+      <Link>Serialization\ITextFormatter`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\ITextTokenizer`1.cs">
+      <Link>Serialization\ITextTokenizer`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\ITokenAnalyzer`1.cs">
+      <Link>Serialization\ITokenAnalyzer`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Token`1.cs">
+      <Link>Serialization\Token`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\TransformFormatter`2.cs">
+      <Link>Serialization\TransformFormatter`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\TransformTokenizer`2.cs">
+      <Link>Serialization\TransformTokenizer`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\TypeCoercionUtility.cs">
+      <Link>Serialization\TypeCoercionUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Filters\DataFilter`2.cs">
+      <Link>Serialization\Filters\DataFilter`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Filters\IDataFilter`2.cs">
+      <Link>Serialization\Filters\IDataFilter`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\GraphCycles\DepthCounter.cs">
+      <Link>Serialization\GraphCycles\DepthCounter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\GraphCycles\GraphCycleException.cs">
+      <Link>Serialization\GraphCycles\GraphCycleException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\GraphCycles\GraphCycleType.cs">
+      <Link>Serialization\GraphCycles\GraphCycleType.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\GraphCycles\ICycleDetector.cs">
+      <Link>Serialization\GraphCycles\ICycleDetector.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\GraphCycles\ReferenceSet.cs">
+      <Link>Serialization\GraphCycles\ReferenceSet.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Providers\DataProviderUtility.cs">
+      <Link>Serialization\Providers\DataProviderUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Providers\DataReaderProvider.cs">
+      <Link>Serialization\Providers\DataReaderProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Providers\DataWriterProvider.cs">
+      <Link>Serialization\Providers\DataWriterProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Providers\IDataReaderProvider.cs">
+      <Link>Serialization\Providers\IDataReaderProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Providers\IDataWriterProvider.cs">
+      <Link>Serialization\Providers\IDataWriterProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\CallbackResolverStrategy.cs">
+      <Link>Serialization\Resolvers\CallbackResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\CombinedResolverStrategy.cs">
+      <Link>Serialization\Resolvers\CombinedResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\ConventionResolverStrategy.cs">
+      <Link>Serialization\Resolvers\ConventionResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\DataContractResolverStrategy.cs">
+      <Link>Serialization\Resolvers\DataContractResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\IResolverCacheContainer.cs">
+      <Link>Serialization\Resolvers\IResolverCacheContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\IResolverStrategy.cs">
+      <Link>Serialization\Resolvers\IResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\PocoResolverStrategy.cs">
+      <Link>Serialization\Resolvers\PocoResolverStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Serialization\Resolvers\ResolverCache.cs">
+      <Link>Serialization\Resolvers\ResolverCache.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelAnalyzer.cs">
+      <Link>Model\ModelAnalyzer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelGrammar.cs">
+      <Link>Model\ModelGrammar.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelReader.cs">
+      <Link>Model\ModelReader.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelSubsequencer.cs">
+      <Link>Model\ModelSubsequencer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelTokenType.cs">
+      <Link>Model\ModelTokenType.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelWalker.cs">
+      <Link>Model\ModelWalker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\ModelWriter.cs">
+      <Link>Model\ModelWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\Filters\Iso8601DateFilter.cs">
+      <Link>Model\Filters\Iso8601DateFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\Filters\MSAjaxDateFilter.cs">
+      <Link>Model\Filters\MSAjaxDateFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Model\Filters\ModelFilter`1.cs">
+      <Link>Model\Filters\ModelFilter`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\CharBuffer.cs">
+      <Link>IO\CharBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\EnumerableStream`1.cs">
+      <Link>IO\EnumerableStream`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\IStream`1.cs">
+      <Link>IO\IStream`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\ITextStream.cs">
+      <Link>IO\ITextStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\ListStream`1.cs">
+      <Link>IO\ListStream`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\SequenceBuffer`1.cs">
+      <Link>IO\SequenceBuffer`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\Stream`1.cs">
+      <Link>IO\Stream`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\StringStream.cs">
+      <Link>IO\StringStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\Subsequence`1.cs">
+      <Link>IO\Subsequence`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\IO\TextReaderStream.cs">
+      <Link>IO\TextReaderStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\Utils\CharUtility.cs">
+      <Link>Utils\CharUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\CodeGen\Delegates.cs">
+      <Link>CodeGen\Delegates.cs</Link>
+    </Compile>
+    <Compile Include="..\src\JsonFx\CodeGen\DynamicMethodGenerator_NoEmit.cs">
+      <Link>CodeGen\DynamicMethodGenerator_NoEmit.cs</Link>
+    </Compile>
+    <Compile Include="JSONTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\JsonFx\Model\.DS_Store">
+      <Link>Model\.DS_Store</Link>
+    </None>
+  </ItemGroup>
+</Project>
