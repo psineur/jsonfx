@@ -267,9 +267,4 @@
     </Compile>
     <Compile Include="JSONTest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\src\JsonFx\Model\.DS_Store">
-      <Link>Model\.DS_Store</Link>
-    </None>
-  </ItemGroup>
 </Project>
